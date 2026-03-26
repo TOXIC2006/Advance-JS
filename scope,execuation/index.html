@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Toast</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Hidden checkbox */
+        #toast-toggle {
+            display: none;
+        }
+
+        /* Button */
+        label {
+            padding: 10px 20px;
+            background: #2196F3;
+            color: white;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+
+        /* Toast */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #333;
+            color: #fff;
+            padding: 16px 24px;
+            border-radius: 8px;
+            opacity: 0;
+            transform: translateY(20px);
+            pointer-events: none;
+        }
+
+        /* Show toast when checked */
+        #toast-toggle:checked~.toast {
+            animation: showToast 3s ease forwards;
+        }
+
+        /* Animation */
+        @keyframes showToast {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            10%,
+            90% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Trigger -->
+    <label for="toast-toggle">Show Toast</label>
+    <input type="checkbox" id="toast-toggle">
+
+    <!-- Toast -->
+    <div class="toast">
+        ✅ Saved successfully!
+    </div>
+    <script src="javascript.js"></script>
+</body>
+
+</html>
