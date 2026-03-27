@@ -29,3 +29,7 @@ setTimeout(() => {
 setTimeout(() => {
     toster("  Done ")
 }, 2000)
+
+let h1 = document.querySelector("h1");
+
+h1.addEventListener("click", toster(" jai shree ram"))
