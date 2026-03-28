@@ -140,5 +140,9 @@ let coffe = {
 };
 
 let arabiacncoffe = Object.create(coffe);
+
 arabiacncoffe.Taste = "sweet";
+
 console.log(arabiacncoffe);
+
+
