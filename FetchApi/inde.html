@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Card</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body
+    class="min-h-screen bg-gradient-to-br from-indigo-100 via-purple-50 to-pink-100 flex flex-col items-center justify-center p-8 gap-8">
+
+    <!-- Reload Button -->
+    <button id="reloadBtn" onclick="loadUsers()"
+        class="px-8 py-3 text-white font-semibold bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl shadow-lg hover:from-indigo-600 hover:to-purple-600 hover:shadow-xl active:scale-95 transition-all duration-200 flex items-center gap-2">
+        🔄 Load New Users
+    </button>
+
+    <!-- User Cards — horizontal layout -->
+    <div class="users flex flex-wrap justify-center gap-6"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
